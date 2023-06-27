@@ -1,0 +1,90 @@
+.titleWrapper {
+  margin-bottom: 4.5rem;
+}
+
+.title {
+  font-size: 3.5rem;
+}
+
+.search {
+  padding: 0 12.5rem;
+  margin-bottom: 2rem;
+
+  &__location {
+    border: none;
+    background-color: white;
+    padding: 18px;
+    color: rgb(28, 28, 30);
+    width: 100%;
+
+    &:focus {
+      background-color: white;
+      outline: solid 0.5px rgb(142, 142, 147);
+    }
+  }
+
+  &__button {
+    color: rgb(142, 142, 147);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 24px;
+    position: relative;
+    left: 44%;
+    bottom: 2.4rem;
+    z-index: 2;
+  }
+}
+
+.temperatureContainer {
+  display: flex;
+}
+
+.temperature {
+  text-align: left;
+  margin-top: 2rem;
+  margin: 2rem 12rem 0 12rem;
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "minMaxFirst minMaxSecond"
+    "capitals capitals";
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    grid-area: title;
+  }
+
+  &__minMaxTitle {
+    display: flex;
+    font-weight: 300;
+    color: rgb(28, 28, 30);
+    margin-bottom: 0.5rem;
+
+    &--first {
+      grid-area: minMaxFirst;
+    }
+    &--second {
+      grid-area: minMaxSecond;
+    }
+
+    &--max {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__capitals {
+    display: flex;
+    color: rgb(28, 28, 30);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    &--max {
+      margin-left: 0.5rem;
+    }
+    &--city {
+      margin-left: 0.5rem;
+    }
+  }
+}
